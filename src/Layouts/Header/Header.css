@@ -1,0 +1,51 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Fondo */
+  color: #fff; /* Texto blanco */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
+  width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  overflow: hidden; /* Evita el desbordamiento */
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+
+/* Móviles (hasta 480px) */
+@media (max-width: 480px) {
+  header {
+    height: 120px; /* Ajusta la altura automáticamente */
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    text-align: center; /* Centra el contenido en móviles */
+  }
+}
+
+/* Tablets (481px a 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  header {
+    height: 55px;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Portátiles y pantallas grandes (1025px en adelante) */
+@media (min-width: 1025px) {
+  header {
+    height: 60px;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+  }
+}
+
+/* Ajuste para el contenido dentro del header */
+header * {
+  margin: 0;
+  padding: 0;
+  line-height: 1; /* Evita que el texto tenga un espacio adicional */
+}

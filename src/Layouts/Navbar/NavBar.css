@@ -1,0 +1,74 @@
+ /* Lista del menú */
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem; /* Aumenta el espacio entre elementos */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas */
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2px;
+  }
+  
+  a:hover {
+    color: gray;
+  }
+  
+  /* Móviles (hasta 480px) */
+  @media (max-width: 480px) {
+    header {
+      height: 120px; /* Aumenta el tamaño del header en móviles */
+      padding: 0 1rem;
+    }
+  
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+      gap: 1.5rem; /* Aumenta el espacio entre columnas */
+      justify-items: center;
+    }
+  
+    a {
+      font-size: 1.2rem; /* Ajusta el tamaño en móviles */
+    }
+  }
+  
+  /* Tablets (481px a 1024px) */
+  @media (min-width: 481px) and (max-width: 1024px) {
+    header {
+      height: 90px;
+      padding: 0 1.5rem;
+    }
+  
+    ul {
+      gap: 3rem;
+    }
+  
+    a {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Portátiles y pantallas grandes (1025px en adelante) */
+  @media (min-width: 1025px) {
+    header {
+      height: 80px;
+      padding: 0 2rem;
+    }
+  
+    ul {
+      gap: 4rem;
+    }
+  
+    a {
+      font-size: 1.2rem;
+    }
+  }
+  

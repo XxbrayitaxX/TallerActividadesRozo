@@ -1,0 +1,80 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en múltiples filas */
+}
+
+/* Texto principal del footer */
+.Pfooter {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.Pfooter:hover {
+  color: gray;
+}
+
+/* Habilidades del footer */
+.Skills {
+  margin-top: 10px;
+  font-size: 1.875rem;
+  transition: color 0.3s ease;
+}
+
+.Skills:hover {
+  color: gray;
+}
+
+/* Móviles (hasta 480px) */
+@media (max-width: 480px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 0.5rem;
+    padding: 6px 0;
+  }
+
+  .Pfooter, .Skills {
+    font-size: 2rem;
+    margin: 5px 0;
+  }
+}
+
+/* Tablets (481px a 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .footer {
+    gap: 1.5rem;
+    padding: 8px 0;
+  }
+
+  .Pfooter, .Skills {
+    font-size: 1.25rem;
+  }
+}
+
+/* Portátiles y pantallas grandes (1025px en adelante) */
+@media (min-width: 1025px) {
+  .footer {
+    gap: 3rem;
+    padding: 10px 0;
+  }
+
+  .Pfooter {
+    font-size: 1.5rem;
+  }
+
+  .Skills {
+    font-size: 1.875rem;
+  }
+}
