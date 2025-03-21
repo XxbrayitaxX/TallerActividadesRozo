@@ -1,8 +1,6 @@
 import { useState } from "react";
 
 export const TallerActividad3 = () => {
-    const [ color, setColor ] = useState("#000000");
-    
     const coloresAbsolutos = [
         "#FF0000",     // Rojo
         "#00FF00",     // Verde
@@ -22,9 +20,31 @@ export const TallerActividad3 = () => {
         "#A52A2A"      // Marrón
         ];
 
-    return(
-        <div>
-            
-        </div>
-    )
+        const [color , setColor] = useState("#FFFFFF");
+        const [mensaje , setMensaje] = useState("haz click para generar un color");
+
+        const generarColor = () => {
+          const colorAleatorio = coloresAbsolutos[Math.floor(Math.random() * coloresAbsolutos.length)];
+          setColor(colorAleatorio);
+          setMensaje(`El color elegido es: ${colorAleatorio}`);
+        };
+        return (
+            <div
+              style={{
+                backgroundColor: color,
+                width: "100vw",
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                color: "#000",
+              }}
+            >
+              <h2>{mensaje}</h2>
+              <button onClick={generarColor} style={{ padding: "10px 20px", marginTop: "20px" }}>
+                Generar Color
+              </button>
+            </div>
+          );
 }
